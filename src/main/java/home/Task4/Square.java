@@ -1,7 +1,11 @@
 package home.Task4;
 
 public class Square extends Shape{
+    //Фабрика не должна быть тут
     SquareFactory sf = new SquareFactory();
+    //поле должно быть private
+    //должно заполняться в конструкторе 
+    //через аргумент!
     int Side = sf.getShape();
 
     @Override
@@ -18,6 +22,9 @@ public class Square extends Shape{
         return perimeter;
     }
 
+    /**
+    Зачем методы которые возвращают площадь и периметр вызывать в конструкторе?
+    **/
     Square() {
         getSquare();
         getPerimeter();
