@@ -1,5 +1,9 @@
 package home.Task4;
 
+/**
+Нужно переопределить в каждой фигуре метод toString()
+который будет отображать строку с информацией о фигуре
+**/
 public class Square extends Shape{
     //Фабрика не должна быть тут
     SquareFactory sf = new SquareFactory();
