@@ -7,7 +7,7 @@ package home.calculator;
  * @author Andrey
 
  */
-
+//Много пустых строк как то :)
 public class Multiplication implements BinaryOperation {
 
 
