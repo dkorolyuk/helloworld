@@ -13,6 +13,7 @@ public class homeTask2_1 {
         Scanner FIO = new Scanner(System.in);
         String strFIO = FIO.nextLine();
         int flLength = strFIO.length() + 3;
+
         for (int i = 0; i <= flLength; i++ ){
             System.out.print("*");
         }
