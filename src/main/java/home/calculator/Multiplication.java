@@ -1,0 +1,22 @@
+package home.calculator;
+
+/**
+
+ * Операция умножения
+
+ * @author Andrey
+
+ */
+
+public class Multiplication implements BinaryOperation {
+
+
+    public double resultFor(double left, double right) {
+
+        return left * right;
+
+    }
+
+
+
+}
