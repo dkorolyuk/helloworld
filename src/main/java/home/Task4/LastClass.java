@@ -2,6 +2,8 @@ package home.Task4;
 
 import java.util.Scanner;
 
+//check commit
+
 public class LastClass {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -35,5 +37,7 @@ public class LastClass {
         //Shape shape = shapeFactory.get();
                 
         //И вот тут выводим периметр и площадь вызвая методы у shape
+        System.out.println("ok");
     }
+
 }
