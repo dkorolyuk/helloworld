@@ -1,28 +1,39 @@
 package home.Task4;
 
 public class Circle extends Shape{
-    CircleFactory Radius = new CircleFactory();
-    int rad = Radius.getShape();
-    private static float square;
-    private static float perimeter;
+    private int radius;
+    private float square;
+    private float perimeter;
+
+    private int getRadius() {
+        System.out.println("Введите радиус");
+        radius = scan.nextInt();
+        return radius;
+    }
+
 
     @Override
     public float getSquare(){
-        square = rad * rad * 3.14f;
-        System.out.println("Площадь = " + square);
+        square = radius * radius * 3.14f;
         return square;
     }
 
     @Override
     public float getPerimeter() {
-        perimeter = 2*3.14f*rad;
-        System.out.println("периметр = " + perimeter);
+        perimeter = 2*3.14f*radius;
         return perimeter;
     }
 
-    public Circle(){
-        getSquare();
+    @Override
+    public String toString() {
+        return ("Square = " + square + "; " + "Perimeter = " + perimeter);
+    }
+
+
+    Circle() {
+        radius = getRadius();
         getPerimeter();
+        getSquare();
     }
 
 }

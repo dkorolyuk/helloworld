@@ -1,36 +1,46 @@
 package home.Task4;
 
+
 /**
 Нужно переопределить в каждой фигуре метод toString()
 который будет отображать строку с информацией о фигуре
 **/
 public class Square extends Shape{
     //Фабрика не должна быть тут
-    SquareFactory sf = new SquareFactory();
     //поле должно быть private
-    //должно заполняться в конструкторе 
+    //должно заполняться в конструкторе
     //через аргумент!
-    int Side = sf.getShape();
+
+    private int side;
+    private float Square;
+    private float perimeter;
 
     @Override
     public float getSquare(){
-        square = Side * Side;
-        System.out.println("Площадь = " + square);
-        return square;
+        Square = side * side;
+        return Square;
     }
 
     @Override
     public float getPerimeter() {
-        perimeter = Side * 4;
-        System.out.println("периметр = " + perimeter);
+        perimeter = side * 4;
         return perimeter;
     }
 
-    /**
-    Зачем методы которые возвращают площадь и периметр вызывать в конструкторе?
-    **/
+    @Override
+    public String toString() {
+        return ("Square = " + Square + "; " + "Perimeter = " + perimeter);
+    }
+
+    private int getSide() {
+        System.out.println("Введите сторону квадрата");
+        side = scan.nextInt();
+        return side;
+    }
+
     Square() {
-        getSquare();
+        side = getSide();
         getPerimeter();
+        getSquare();
     }
 }

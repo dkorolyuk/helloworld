@@ -1,16 +1,19 @@
 package home.Task4;
 
 public class CircleFactory extends ShapeFactory {
-    int radius;
+    public int radius;
 
     @Override
-    public int getShape(){
-        System.out.println("Введите радиус");
-        int radius = scan.nextInt();
-        //System.out.println(radius);
-        return radius;
+    public Circle getShape(){
+        Circle circle = new Circle();
+        return circle;
     }
 
+    /*public int getRadius() {
+        System.out.println("Введите радиус");
+        int radius = scan.nextInt();
+        return radius;
+    }*/
 }
 
 

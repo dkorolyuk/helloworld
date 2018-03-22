@@ -5,7 +5,16 @@ public class TriangleFactory extends ShapeFactory {
     int sideRight;
     int sideBase;
 
-    public int getSideLeft(){
+    @Override
+    public Triangle getShape() {
+        Triangle triangle = new Triangle();
+        //getSideLeft();
+        //getSideRight();
+        //getSideBase();
+        return triangle;
+    }
+
+   /* public int getSideLeft(){
         System.out.println("Введите левую грань треугольника");
         sideLeft = scan.nextInt();
         return sideLeft;
@@ -21,5 +30,5 @@ public class TriangleFactory extends ShapeFactory {
         System.out.println("Введите основание треугольника");
         sideBase = scan.nextInt();
         return sideBase;
-    }
+    }*/
 }

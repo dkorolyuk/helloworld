@@ -1,25 +1,22 @@
 package home.Task4;
 
-public abstract class Shape {
-    /**
-    Поля не нужны 
-    **/
-    public float square;
-    public float perimeter;
+import java.util.Scanner;
 
+public abstract class Shape {
     /**
     Метод должен быть абстрактным а реализация в классе конкретной фигуры
     **/
-    public float getSquare(){
-        System.out.println("Площадь = " + square);
-        return square;
-    }
+    abstract public float getSquare();
     
     /**
     Метод должен быть абстрактным а реализация в классе конкретной фигуры
     **/
-    public float getPerimeter() {
-        System.out.println("периметр = " + perimeter);
-        return perimeter;
+    abstract public float getPerimeter();
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
+
+    protected Scanner scan = new Scanner(System.in);
 }
