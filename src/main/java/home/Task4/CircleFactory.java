@@ -9,11 +9,6 @@ public class CircleFactory extends ShapeFactory {
         return circle;
     }
 
-    /*public int getRadius() {
-        System.out.println("Введите радиус");
-        int radius = scan.nextInt();
-        return radius;
-    }*/
 }
 
 

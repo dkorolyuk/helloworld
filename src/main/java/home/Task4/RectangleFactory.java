@@ -9,15 +9,4 @@ public class RectangleFactory extends ShapeFactory {
         return rectangle;
     }
 
-    /*public int getHight(){
-        System.out.println("Введите высоту прямоугольника");
-        Hight = scan.nextInt();
-        return Hight;
-    }
-
-    public int getWidth(){
-        System.out.println("Введите ширину прямоугольника");
-        Width = scan.nextInt();
-        return Width;
-    }*/
 }
