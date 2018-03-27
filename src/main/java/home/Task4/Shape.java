@@ -18,5 +18,4 @@ public abstract class Shape {
         return super.toString();
     }
 
-    protected Scanner scan = new Scanner(System.in);
 }

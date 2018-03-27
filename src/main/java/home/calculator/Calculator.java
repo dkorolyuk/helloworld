@@ -39,6 +39,8 @@ public class Calculator {
                 return new Logarithm();
             case "sqrt":
                 return new Root();
+            case "/":
+                return new Division();
             default:
                 return null;
         }
@@ -46,22 +48,13 @@ public class Calculator {
 
 
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        double val1;
-        double val2;
-        String operator;
-        String expresion;
-        System.out.println("Введите выражение");
-        expresion = scan.nextLine();
-        String [] expArr = expresion.split(" ");
-        val1 = Double.valueOf(expArr[0]);
-        val2 = Double.valueOf(expArr[2]);
-        operator = expArr[1];
+    public static void main(String[] args) throws ParserExeption{
+        Parser parser = new Parser();
+        double val1 = parser.getVal1();
+        double val2 = parser.getVal2();
+        String operator = parser.getOperator();
 
         Calculator calculator = new Calculator();
         System.out.println( calculator.calculate(val1, val2, operator) );
-        //System.out.println( calculator.calculate(456.546, 545.5465, "*") );
-        //System.out.println( calculator.calculate(456.546, 545.5465, "-") );
     }
 }

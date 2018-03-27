@@ -7,23 +7,7 @@ public class Triangle extends Shape {
     private float square;
     private float perimeter;
 
-    private int getSideLeft(){
-        System.out.println("Введите левую грань треугольника");
-        sideLeft = scan.nextInt();
-        return sideLeft;
-    }
 
-    private int getSideRight(){
-        System.out.println("Введите правую грань треугольника");
-        sideRight = scan.nextInt();
-        return sideRight;
-    }
-
-    private int getSideBase(){
-        System.out.println("Введите основание треугольника");
-        sideBase = scan.nextInt();
-        return sideBase;
-    }
 
     @Override
     public float getPerimeter() {
@@ -44,10 +28,10 @@ public class Triangle extends Shape {
 
 
 
-    Triangle () {
-        sideLeft = getSideLeft();
-        sideRight = getSideRight();
-        sideBase = getSideBase();
+    Triangle ( int sideLeft, int sideRight, int sideBase) {
+        this.sideLeft = sideLeft;
+        this.sideRight = sideRight;
+        this.sideBase = sideBase;
         getPerimeter();
         getSquare();
     }

@@ -5,12 +5,6 @@ public class Circle extends Shape{
     private float square;
     private float perimeter;
 
-    private int getRadius() {
-        System.out.println("Введите радиус");
-        radius = scan.nextInt();
-        return radius;
-    }
-
 
     @Override
     public float getSquare(){
@@ -30,8 +24,8 @@ public class Circle extends Shape{
     }
 
 
-    Circle() {
-        radius = getRadius();
+    Circle(int radius) {
+        this.radius = radius;
         getPerimeter();
         getSquare();
     }

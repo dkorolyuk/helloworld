@@ -22,21 +22,11 @@ public class Rectangle extends Shape {
     public String toString() {
         return ("Square = " + square + "; " + "Perimeter = " + perimeter);
     }
-    private int getHight(){
-        System.out.println("Введите высоту прямоугольника");
-        Hight = scan.nextInt();
-        return Hight;
-    }
 
-    private int getWidth(){
-        System.out.println("Введите ширину прямоугольника");
-        Width = scan.nextInt();
-        return Width;
-    }
 
-    Rectangle() {
-        Hight = getHight();
-        Width = getWidth();
+    Rectangle(int Hight, int Width) {
+        this.Hight = Hight;
+        this.Width = Width;
         getPerimeter();
         getSquare();
     }

@@ -32,14 +32,9 @@ public class Square extends Shape{
         return ("Square = " + Square + "; " + "Perimeter = " + perimeter);
     }
 
-    private int getSide() {
-        System.out.println("Введите сторону квадрата");
-        side = scan.nextInt();
-        return side;
-    }
 
-    Square() {
-        side = getSide();
+    Square(int side) {
+        this.side = side;
         getPerimeter();
         getSquare();
     }

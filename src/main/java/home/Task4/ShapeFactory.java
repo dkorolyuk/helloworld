@@ -10,5 +10,7 @@ public abstract class ShapeFactory {
     Метод должен врзвращат Shape и должен быть абстрактным
     а реализация в классе-фабрики конкретной фигуры
     **/
+    protected Scanner scan = new Scanner(System.in);
+
     abstract public Shape getShape();
 }

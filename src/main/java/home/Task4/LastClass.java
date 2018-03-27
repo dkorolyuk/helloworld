@@ -10,7 +10,7 @@ public class LastClass {
         System.out.println("Выберите фигуру:1 - круг; 2 - квадрат; 3 - прямоугольник; 4 - треугольник " );
         int shapeNum = scan.nextInt();
         //Вот тут должно быть 
-        ShapeFactory shapeFactory = new SquareFactory();
+        ShapeFactory shapeFactory = null;
         switch (shapeNum){
             case 1:
                 shapeFactory = new CircleFactory();
