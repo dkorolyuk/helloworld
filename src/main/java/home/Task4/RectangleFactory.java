@@ -1,26 +1,20 @@
 package home.Task4;
 
 public class RectangleFactory extends ShapeFactory {
-    private int Hight = getHight();
-    private int Width = getWidth();
+
     @Override
     public Rectangle getShape(){
-        Rectangle rectangle = new Rectangle(Hight, Width);
-        return rectangle;
+        int Hight = getHight();
+        int Width = getWidth();
+        return new Rectangle(Hight, Width);
     }
     private int getHight(){
         System.out.println("Введите высоту прямоугольника");
-        Hight = scan.nextInt();
-        return Hight;
+        return scan.nextInt();
     }
 
     private int getWidth(){
         System.out.println("Введите ширину прямоугольника");
-        Width = scan.nextInt();
-        return Width;
-    }
-
-    RectangleFactory() {
-        getShape();
+        return scan.nextInt();
     }
 }
