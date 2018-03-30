@@ -4,6 +4,7 @@ public class Triangle extends Shape {
     private int sideLeft;
     private int sideRight;
     private int sideBase;
+    //
 
 
 

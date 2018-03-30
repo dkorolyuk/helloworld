@@ -10,6 +10,7 @@ public class Square extends Shape{
     //поле должно быть private
     //должно заполняться в конструкторе
     //через аргумент!
+    //
 
     private int side;
 
