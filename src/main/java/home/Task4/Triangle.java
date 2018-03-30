@@ -4,26 +4,22 @@ public class Triangle extends Shape {
     private int sideLeft;
     private int sideRight;
     private int sideBase;
-    private float square;
-    private float perimeter;
 
 
 
     @Override
     public float getPerimeter() {
-        perimeter = sideLeft + sideRight + sideBase;
-        return perimeter;
+        return sideLeft + sideRight + sideBase;
     }
 
     @Override
     public float getSquare(){
-        square = (float) Math.sqrt(perimeter/2 * (perimeter/2 - sideLeft) * (perimeter/2 - sideRight) * (perimeter/2 - sideBase));
-        return square;
+        return  (float) Math.sqrt(getPerimeter()/2 * (getPerimeter()/2 - sideLeft) * (getPerimeter()/2 - sideRight) * (getPerimeter()/2 - sideBase));
     }
 
     @Override
     public String toString() {
-        return ("Square = " + square + "; " + "Perimeter = " + perimeter);
+        return ("Square = " + getSquare() + "; " + "Perimeter = " + getPerimeter());
     }
 
 
@@ -32,7 +28,5 @@ public class Triangle extends Shape {
         this.sideLeft = sideLeft;
         this.sideRight = sideRight;
         this.sideBase = sideBase;
-        getPerimeter();
-        getSquare();
     }
 }

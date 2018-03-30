@@ -2,32 +2,26 @@ package home.Task4;
 
 public class Circle extends Shape{
     private int radius;
-    private float square;
-    private float perimeter;
 
 
     @Override
     public float getSquare(){
-        square = radius * radius * 3.14f;
-        return square;
+        return radius * radius * 3.14f;
     }
 
     @Override
     public float getPerimeter() {
-        perimeter = 2*3.14f*radius;
-        return perimeter;
+        return  2*3.14f*radius;
     }
 
     @Override
     public String toString() {
-        return ("Square = " + square + "; " + "Perimeter = " + perimeter);
+        return ("Square = " + getSquare() + "; " + "Perimeter = " + getPerimeter());
     }
 
 
     Circle(int radius) {
         this.radius = radius;
-        getPerimeter();
-        getSquare();
     }
 
 }
