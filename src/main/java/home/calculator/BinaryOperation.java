@@ -17,7 +17,7 @@ public interface BinaryOperation {
      * @return результат операции
      */
 
-    double resultFor(double left, double right);
+    double resultFor(double left, double right) throws PredicateException;
 
 
 
