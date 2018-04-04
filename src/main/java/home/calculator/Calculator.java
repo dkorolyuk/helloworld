@@ -48,11 +48,15 @@ public class Calculator {
 
 
 
-    public static void main(String[] args) throws ParserExeption{
-        Parser parser = new Parser();
-        double val1 = parser.getVal1();
-        double val2 = parser.getVal2();
-        String operator = parser.getOperator();
+    public static void main(String[] args){
+        String expression;
+        System.out.println("Введите выражение");
+        Scanner scan = new Scanner(System.in);
+        expression = scan.nextLine();
+        String [] expArr = expression.split(" ");
+        double val1 = Double.valueOf(expArr[0]);
+        double val2 = Double.valueOf(expArr[2]);
+        String operator = expArr[1];
 
         Calculator calculator = new Calculator();
         System.out.println( calculator.calculate(val1, val2, operator) );

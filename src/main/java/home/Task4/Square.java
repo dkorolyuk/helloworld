@@ -10,32 +10,27 @@ public class Square extends Shape{
     //поле должно быть private
     //должно заполняться в конструкторе
     //через аргумент!
+    //
 
     private int side;
-    private float Square;
-    private float perimeter;
 
     @Override
     public float getSquare(){
-        Square = side * side;
-        return Square;
+        return side * side;
     }
 
     @Override
     public float getPerimeter() {
-        perimeter = side * 4;
-        return perimeter;
+        return side * 4;
     }
 
     @Override
     public String toString() {
-        return ("Square = " + Square + "; " + "Perimeter = " + perimeter);
+        return ("Square = " + getSquare() + "; " + "Perimeter = " + getPerimeter());
     }
 
 
     Square(int side) {
         this.side = side;
-        getPerimeter();
-        getSquare();
     }
 }
