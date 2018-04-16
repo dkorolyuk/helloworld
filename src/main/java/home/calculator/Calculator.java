@@ -7,6 +7,12 @@ package home.calculator;
 
 public class Calculator {
 
+    /**
+    public double calculate(double val1, double val2, String operator) throws PredicateException, OperatorException {
+        BinaryOperation operation = getOperationFor(operator);}
+        return operation.resultFor(val1, val2);
+    }
+    **/
     public double calculate(double val1, double val2, String operator) throws PredicateException {
         BinaryOperation operation = null;
         try{operation = getOperationFor(operator);}
@@ -61,6 +67,16 @@ public class Calculator {
         catch (NumberFormatException nfe) {
             System.err.println("Incorrect predicate2");
         }
+
+        /**
+        try {
+            operator = parser.getOperator(expression);
+        } catch (PredicateException pe) {
+            //тут сообщение об этой ошибке 
+        } catch (OperatorException oe) {
+            //тут о другой ошибке
+        }
+        **/
         operator = parser.getOperator(expression);
 
         Calculator calculator = new Calculator();
