@@ -60,7 +60,7 @@ public class Calculator {
             System.err.println("Incorrect predicate2");
         }
         operator = parser.getOperator(expression);
-        
+
 
         Calculator calculator = new Calculator();
         try {
