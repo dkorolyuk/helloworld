@@ -8,22 +8,18 @@ package home.calculator;
 public class Calculator {
 
     public double calculate(double val1, double val2, String operator) throws PredicateException {
-        BinaryOperation operation = getOperationFor(operator);
-        if (operation == null) {
-            System.out.println("Неизвестный оператор " + operator);
-            return Double.NaN;
+        BinaryOperation operation = null;
+        try{operation = getOperationFor(operator);}
+        catch (OperatorException oe){
+            System.err.println(oe.toString());
         }
-        return operation.resultFor(val1, val2);
+                return operation.resultFor(val1, val2);
     }
 
 
 
-    private BinaryOperation getOperationFor(String operator) {
-       /*if ("*".equals(operator)) {
-            return new Multiplication();
-        } else if ("-".equals(operator)) {
-            return new Substraction();
-        }*/
+    private BinaryOperation getOperationFor(String operator)throws OperatorException{
+
         switch (operator) {
             case "*":
                 return new Multiplication();
@@ -40,7 +36,8 @@ public class Calculator {
             case "/":
                 return new Division();
             default:
-                return null;
+                throw new OperatorException("Unknown operator");
+                //return null;
         }
     }
 
@@ -50,8 +47,9 @@ public class Calculator {
         Parser parser = new Parser();
         double val1 = 0.0;
         double val2 = 0.0;
+        String operator = null;
         String[] expression = null;
-        try {expression = parser.ExpressionParser();}
+        try {expression = parser.expressionParser();}
         catch (ParserException pe){
             System.err.println(pe.toString());
         }
@@ -63,7 +61,7 @@ public class Calculator {
         catch (NumberFormatException nfe) {
             System.err.println("Incorrect predicate2");
         }
-        String operator = parser.getOperator(expression);
+        operator = parser.getOperator(expression);
 
         Calculator calculator = new Calculator();
         try {System.out.println( calculator.calculate(val1, val2, operator) );}
