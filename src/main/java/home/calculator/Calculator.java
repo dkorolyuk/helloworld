@@ -10,6 +10,7 @@ public class Calculator {
     public double calculate(double val1, double val2, String operator) throws PredicateException {
         BinaryOperation operation = getOperationFor(operator);
         if (operation == null) {
+            //тут должно быть исключение
             System.out.println("Неизвестный оператор " + operator);
             return Double.NaN;
         }
@@ -51,14 +52,24 @@ public class Calculator {
         double val1 = 0.0;
         double val2 = 0.0;
         String[] expression = null;
+        /**
+        отформатируй, так нельзя писать 
+        try {
+            expression = parser.ExpressionParser();
+        } catch (ParserException pe) {
+            System.err.println(pe.toString());
+        }
+        **/
         try {expression = parser.ExpressionParser();}
         catch (ParserException pe){
             System.err.println(pe.toString());
         }
+        //отформатируй, так нельзя писать 
         try {val1 = parser.getVal1(expression);}
         catch (NumberFormatException nfe) {
             System.err.println("Incorrect predicate1");
         }
+        //отформатируй, так нельзя писать 
         try {val2 = parser.getVal2(expression);}
         catch (NumberFormatException nfe) {
             System.err.println("Incorrect predicate2");
@@ -66,6 +77,7 @@ public class Calculator {
         String operator = parser.getOperator(expression);
 
         Calculator calculator = new Calculator();
+        //отформатируй, так нельзя писать 
         try {System.out.println( calculator.calculate(val1, val2, operator) );}
         catch (NullPointerException npe) {
             System.err.println("Cannot count without correct expression");
