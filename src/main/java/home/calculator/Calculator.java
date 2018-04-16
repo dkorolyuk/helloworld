@@ -10,7 +10,7 @@ public class Calculator {
     public double calculate(double val1, double val2, String operator) throws PredicateException {
         BinaryOperation operation = getOperationFor(operator);
         if (operation == null) {
-            //тут должно быть исключение
+            //смотри ниже, этой проверки тут не должно быть
             System.out.println("Неизвестный оператор " + operator);
             return Double.NaN;
         }
@@ -41,6 +41,7 @@ public class Calculator {
             case "/":
                 return new Division();
             default:
+                //тут должно порождаться исключение "Неизвестный оператор "
                 return null;
         }
     }
@@ -60,7 +61,7 @@ public class Calculator {
             System.err.println(pe.toString());
         }
         **/
-        try {expression = parser.ExpressionParser();}
+        try {expression = parser.ExpressionParser();} 
         catch (ParserException pe){
             System.err.println(pe.toString());
         }
